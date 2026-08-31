@@ -596,5 +596,20 @@
         &copy; 2026 KKN Cikembang 1 - Universitas Muhammadiyah Bandung
       </div>
     </footer>
+    <!-- KODE PENGUNCI FOTO AGAR TIDAK BISA DIUNDUH -->
+<script>
+    // 1. Mematikan fungsi klik kanan di laptop/komputer
+    document.addEventListener('contextmenu', function(e) {
+        if (e.target.nodeName === 'IMG') {
+            e.preventDefault();
+        }
+    }, false);
+
+    // 2. Mematikan fungsi tekan lama (hold to save) di layar HP
+    document.querySelectorAll('img').forEach(function(img) {
+        img.style.webkitTouchCallout = 'none';
+        img.style.webkitUserSelect = 'none';
+    });
+</script>
   </body>
 </html>
